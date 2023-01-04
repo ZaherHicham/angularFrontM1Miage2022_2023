@@ -1,0 +1,19 @@
+<h1>
+  <nav>
+    <a routerLink="/home">{{title}}</a>
+  </nav>
+</h1>
+<button mat-flat-button color="primary" *ngIf="!isLogged" (click)="login()">Connexion</button>
+<br>
+<button mat-flat-button color="primary" *ngIf="isLogged" (click)="logout()">Deconnexion</button>
+<br>
+<div class="AjouterBtn" >
+  <a routerLink="/add">
+    <button mat-flat-button color="accent" *ngIf="isLogged">
+      Ajouter Assignment
+    </button>
+  </a>
+</div>
+<br>
+<button mat-flat-button color="primary" (click)="initialiserLaBaseAvecDonneesTests()">PeuplerBD</button>
+<router-outlet></router-outlet>
